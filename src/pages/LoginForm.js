@@ -37,7 +37,7 @@ function LoginForm() {
       // After successful login
       localStorage.setItem('udiseNumber', udiseNumber);
       localStorage.setItem('language', data.language); 
-      window.location.href = '/';
+      window.location.href = '/home';
     } catch (error) {
       console.error('Error logging in:', error);
       setErrorMessage(language === "English" ? 'An error occurred while logging in. Please try again later.' : 'लॉगिन करताना त्रुटी आली. कृपया नंतर पुन्हा प्रयत्न करा.');
