@@ -1,0 +1,48 @@
+
+.bona {
+  width: 600px; /* (148mm / 25.4) * 96 */
+  height: 300px; /* (210mm / 25.4) * 96 */
+  flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: absolute;
+  top: 20px; /* Adjust as needed for the desired distance from the top */
+  right: 20px; /* Adjust as needed for the desired distance from the right */
+  transform: translateX(-50%);
+  padding: 20px;
+}
+
+.certificate-container {
+  position: absolute;
+  top: 80px;
+  right: 150px;
+  margin-top: 20px; /* Adjust the margin as needed */
+  width: 600px; /* Adjust width as needed */
+  height: 400px !important; /* Override height with !important */
+}
+
+.pdf-iframe {
+  width: 30%; /* Adjust width as needed 
+  height: 500px; /* Adjust height as needed */
+  border: 1px solid #ccc; /* Add border as needed */
+  margin-left: auto; /* Align to the right side */
+
+}
+
+.certificate-container .btn {
+  width: 100%;
+  max-width: 200px; /* Limit maximum width if needed */
+}
+
+.iframe {
+  width: 100px;  
+  height: 400px;
+}
+
+.square-box {
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  border: 1px solid black; /* Black border */
+  background-color: black; /* Fill with black color */
+  margin-left:450px; /* Move to the right */
+
+}

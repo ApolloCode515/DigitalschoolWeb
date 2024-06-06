@@ -1,0 +1,94 @@
+.styled-table-container {
+  overflow: auto;
+  max-height: 400px;
+}
+
+.styled-table, .student-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Arial', sans-serif;
+}
+
+.styled-table {
+  margin: 25px 0;
+  font-size: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr, .student-info-table thead {
+  background-color: #4191e8;
+  color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.styled-table th, .styled-table td, .student-info-table th, .student-info-table td, .table.student-info-table th, .table.student-info-table td {
+  padding: 10px 13px;
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #dddddd;
+}
+
+.age-group-header, .class-column {
+  color: black;
+  cursor: pointer;
+}
+
+.class-column {
+  font-size: 12px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  margin-right: 10px;
+}
+
+.print-button {
+  font-size: 16px;
+}
+
+.student-detail-row {
+  position: absolute;
+  background-color: white;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+}
+
+.age-group-header {
+  width: 50px;
+}
+
+.student-info-table thead, .student-info-table tbody {
+  display: block;
+}
+
+.student-info-table thead {
+  width: calc(100% - 17px);
+}
+
+.student-info-table tbody {
+  max-height: 100px;
+  overflow-y: scroll;
+  white-space: nowrap;
+}

@@ -1,0 +1,183 @@
+.container {
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title, .custom-heading, .custom-heading-text, .custom-heading-hr {
+  text-align: center;
+}
+
+.filters, .filter-options, .filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter {
+  flex: 1;
+  margin-right: 10px;
+}
+
+label {
+  margin-right: 5px;
+}
+
+select, .dropdown, .select select {
+  padding: 2px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+}
+
+.clear-button, .print-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.clear-button:hover {
+  background-color: #c91313;
+}
+
+.student-table, .custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.student-table th, .student-table td, .custom-table th, .custom-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.custom-table th, .custom-table td {
+  background-color: #343a40;
+  color: white;
+  text-align: left;
+}
+
+.filter-icon {
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.select select::-ms-expand {
+  display: none;
+}
+
+.custom-heading-text, .custom-heading {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  top: 10px;
+  padding: 10px;
+}
+
+.custom-heading-hr {
+  width: 50%;
+  border: 1px solid #000; /* Change the color as needed */
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .dropdown-label, .dropdown, .clear-button {
+    margin: 5px 0;
+  }
+}
+
+@media print {
+  .filter-container, .print-button, .filterbtn1, .clear-button, .rightSide, .classDropdown, .ilter-options, .checkbox, .filter-panel, .footer {
+    display: none !important;
+    border: none !important;
+  }
+}
+
+.filter-panel, .custom-menu1 {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 100;
+}
+
+.filter-panel {
+  top: 100%; /* Position it below the filter icon */
+  right: 10%;
+  width: 200px;
+}
+
+
+.custom-menu1 {
+  top: 100%;
+  left: 0;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+.custom-menu1.open1 {
+  display: block;
+}
+
+.open1 {
+  display: block !important;
+}
+
+.open-card1 {
+  text-align: start;
+}
+
+
+@media print {
+  
+  table {
+      width: 100%; /* Ensure table width is full */
+      margin: 0;
+      left: 0; /* Align table to the left edge */
+      float: left;
+  }
+  h1, h2, h3, h4, .custom-heading-text {
+      font-size: 12px;
+  }
+  tr th {
+      font-size: 8px;
+      margin: 0;
+      padding: 0;
+  }
+  td {
+      font-size: 7px;
+      margin: 0;
+      padding: 0;
+  }
+  body {
+      overflow: hidden; /* Hide scrollbar */
+  }
+  ::-webkit-scrollbar {
+      display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
+
+}

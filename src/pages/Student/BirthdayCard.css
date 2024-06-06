@@ -1,0 +1,164 @@
+/* General Styles */
+.school-birthday-card {
+  background-color: #ceeae9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form_container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Birthday Container Styles */
+.birthday-container {
+  margin-top: 20px;
+}
+
+/* Birthday Card Styles */
+.birthday-card {
+  background-color: whitesmoke;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Text Alignment Styles */
+.text-center {
+  text-align: center;
+}
+
+/* Image Styles */
+.birthday-image {
+  max-width: 50%;
+  height: auto;
+  margin: 10px auto; /* Center the image horizontally */
+}
+
+/* Image Navigation Button Styles */
+.image-navigation-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.image-navigation-button:hover {
+  background-color: #0056b3;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.student-image {
+  max-width: 70%; /* Set maximum width to fill the container */
+  max-height: 70%; /* Set maximum height to fill the container */
+  width: 100%; /* Ensure the image maintains its aspect ratio */
+  height:100%; /* Ensure the image maintains its aspect ratio */
+}
+
+/* WhatsApp Button Styles */
+.whatsapp-button {
+  background-color: transparent; /* Set background color to transparent */
+  border: none; /* Remove border */
+  cursor: pointer;
+}
+
+.whatsapp-button:hover {
+  outline: none; /* Remove outline on hover */
+}
+
+.whatsapp-icon {
+  margin-right: 5px; /* Add margin to separate icon from text */
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.loading-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Update z-index to ensure spinner is displayed above the background */
+}
+
+.button-container {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 2000;
+}
+
+.arrow-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 22px;
+}
+.arrow-button:hover{
+  color: rgb(107, 107, 107);
+  font-size: 25px;
+}
+.left-arrow {
+  left: 0;
+  
+}
+
+.right-arrow {
+  right: 0;
+ 
+}
+.whatsapp-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.loading-animation img {
+  width: 40px; /* Set the width of the spinner image */
+  height: 40px; /* Set the height of the spinner image */
+}

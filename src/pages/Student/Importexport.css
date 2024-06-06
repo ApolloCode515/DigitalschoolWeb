@@ -1,0 +1,166 @@
+
+/* Styling for the container box */
+.box {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #c9e7f0;
+  }
+  
+  /* Styling for the heading */
+  .box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the file upload section */
+  /* Style.css */
+  
+  .file-upload {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Distribute space between the elements */
+    align-items: center; /* Center vertically */
+    margin-bottom: 20px;
+  }
+  
+  .file-upload label {
+    margin-right: 10px; /* Adjust the right margin for spacing */
+  }
+  
+  .file-upload input[type="file"] {
+    flex: 1; /* Fill remaining space */
+  }
+  
+  
+  .file-upload label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .file-upload label:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styling for the table container */
+  .table-container {
+    margin-top: 20px;
+  }
+  
+  /* Styling for the tables */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .data-table th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Style.css */
+  
+  .table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black; /* Add black border */
+  }
+  
+  .table-container th,
+  .table-container td {
+    border: 1px solid black; /* Add border to cells */
+    padding: 8px; /* Add padding for better spacing */
+  }
+  
+  /* Optionally, you can style the header row differently */
+  .table-container thead th {
+    background-color: #f2f2f2; /* Light gray background for header */
+  }
+  
+  /* Optionally, you can add styles for hover effect */
+  .table-container tbody tr:hover {
+    background-color: #f5f5f5; /* Light gray background on hover */
+  }
+  
+  /* Style.css */
+  
+  .file-upload button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .file-upload button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Style.css */
+  
+  .export-button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Add some space above the button */
+  }
+  
+  .export-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .export-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  .export-label-container {
+    text-align: center;
+  }
+  
+  /* Style.css */
+  /* Define breakpoints for media queries */
+  @media screen and (max-width: 768px) {
+    .file-upload {
+      flex-direction: column; /* Change to vertical layout */
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .file-upload label,
+    .file-upload button {
+      padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+  }
+  
+  /* Adjust table styles for smaller screens */
+  @media screen and (max-width: 768px) {
+    .table-container table {
+      font-size: 14px; /* Decrease font size */
+    }
+  }
+  
+  /* Responsive adjustments for buttons */
+  @media screen and (max-width: 600px) {
+    .export-button {
+      font-size: 14px; /* Decrease font size */
+    }
+  }

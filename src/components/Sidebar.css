@@ -1,0 +1,82 @@
+.sidebar {
+  width: 10%;
+  height: 100vh; /* Adjust height as needed */
+  position: fixed;
+  top: 10%;
+  left: 0;
+}
+
+.sidebar a {
+  display: block; /* Change to block to display each link in a separate box */
+  width: 100%; /* Occupy full width of sidebar */
+  padding: 15px 9px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  background-color: #a1ccf5; /* Set background color of links */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  color: #0f0101;
+  text-decoration: none;
+  margin-bottom: 10px; /* Adjust spacing between links as needed */
+  transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transition */
+}
+
+.sidebar a:hover {
+  color: #007bff; /* Change color on hover as needed */
+  transform: translateX(5px); /* Add floating effect */
+}
+
+.sidebar svg {
+  margin-right: 10px; /* Adjust spacing between icon and text as needed */
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    width: 1%;
+    height: 100vh; /* Adjust height as needed */
+    position: fixed;
+    top: 10%;
+    left: 0;
+  }
+  
+  .sidebar a {
+    width: auto; /* Reset width to auto for small screens */
+    padding: 10px; /* Reduce padding for small screens */
+    text-align: center; /* Center-align text */
+    background-color: transparent; /* Remove background color for small screens */
+  }
+
+  .sidebar a span {
+    display: none; /* Hide text on small screens */
+  }
+
+  .sidebar svg {
+    margin-right: 0; /* Reset margin for icons */
+  }
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 400px) {
+  .sidebar {
+    width: 1%;
+    height: 100vh; /* Adjust height as needed */
+    position: fixed;
+    top: 10%;
+    left: 0;
+  }
+  
+  .sidebar a {
+    width: auto; /* Reset width to auto for small screens */
+    padding: 10px; /* Reduce padding for small screens */
+    text-align: center; /* Center-align text */
+    background-color: transparent; /* Remove background color for small screens */
+  }
+
+}
+
+
+/* Hide sidebar when printing */
+@media print {
+  .sidebar {
+    display: none;
+  }
+}

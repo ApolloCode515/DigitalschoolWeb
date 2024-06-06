@@ -1,0 +1,22 @@
+@media print {
+    /* Hide filter options */
+    #gender,
+    #casteDropdown,
+    #classDropdown,
+    #registerDropdown,
+    .dropdown-label,
+    .genderOption {
+      display: none !important;
+    }
+  
+    /* Hide clear button */
+    .btn-primary {
+      display: none !important;
+    }
+  
+    /* Hide print button */
+    .float-end {
+      display: none !important;
+    }
+  }
+  

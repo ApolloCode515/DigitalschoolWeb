@@ -1,0 +1,615 @@
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.min.css";
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* navigation starts */
+
+.Navbar {
+    width: 100%;
+    height: 70px;
+    background-color: #03365e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+  }
+  
+  .leftSide {
+    display: flex;
+    align-items: center;
+  }
+  
+  .leftSide img {
+    width: 70px; 
+    height: 70px; 
+    object-fit: cover;
+  }
+  
+  .rightSide {
+    display: flex;
+    gap: 50px; 
+    margin-left: 20px; 
+    padding-right: 5%; 
+  }
+  
+  .rightSide a {
+    text-decoration: none;
+    color: rgb(243, 234, 234); 
+    padding: 8px 16px;
+    transition: color 0.3s;
+    border: 1px solid white; 
+    border-radius: 20px;
+  }
+  
+  .rightSide a:hover {
+    color: rgb(1, 1, 37);
+    transform: scale(1.1); 
+    transition: color 0.3s;
+    border: 1px solid rgb(1, 1, 37); 
+  }
+  
+  /* Add border to specific links */
+  .rightSide a[href="/"] , .rightSide a[href="/Logout"] {
+    border: 1px solid #fff; 
+  }
+  @media only screen and (max-width: 768px) {
+    .Navbar {
+      padding: 0 5%;
+    }
+  }
+/* register student start */
+.register {
+    height: 100%;
+}
+
+.registerNoExists button {
+    background-color: rgb(19, 148, 242);
+    border: 1px white solid;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.registerNoExists button:hover, .schoolRegisterForm form button:hover {
+    background-color: white;
+    border: 1px rgb(19, 148, 242) solid;
+    color: rgb(19, 148, 242);
+}
+
+.stduent-register select,
+.stduent-register input[type="text"],
+.stduent-register input[type="number"],
+.stduent-register input[type="date"] {
+    color: rgb(68, 67, 67);
+    margin-bottom: 4% !important;
+    width: 85% !important;
+}
+
+.gender-form {
+    margin-top: -30px;
+}
+
+/* footer starts */
+.footer {
+    position: fixed; 
+    left: 0; 
+    bottom: 0; 
+    width: 100%; 
+    height: 40px; 
+    background-color: #03365e; 
+    color: white; 
+    text-align: left; 
+    padding: 10px 0; 
+  }
+  
+  .socialMedia svg {
+    color: white;
+    margin: 20px;
+    font-size: 70px;
+    cursor: pointer;
+  }
+  
+  .footer p {
+    color: white;
+    margin-left: 2px; 
+  }
+
+/* footer ends */
+/* Hide print button when printing */
+@media print {
+    .print-button {
+        display: none !important;
+    }
+    table {
+        width: 100%; /* Ensure table width is full */
+        margin: 0;
+        left: 0; /* Align table to the left edge */
+    }
+    h1, h2, h3, h4 {
+        font-size: 10px;
+    }
+    tr th {
+        font-size: 8px;
+    }
+    td {
+        font-size: 7px;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        overflow: hidden; /* Hide scrollbar */
+    }
+    ::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+    }
+  
+}
+
+
+/* school registratio start */
+.language-drop{
+    float: right;
+    background-color: #007bff;
+    border:1px solid  white;
+    color: white;
+    height: 30px;
+    padding: 0px;
+    border-radius: 5px;
+}
+.language-drop:hover{ 
+    background-color: white;
+    border:1px solid #007bff;
+    color: #007bff;
+}
+.language-drop option{
+    background-color: white;
+    border:1px solid #007bff;
+    color: #007bff;
+}
+.schoolRegisterForm {
+    text-align: center;
+    margin-top: 5% !important;
+    margin: 0 auto;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.schoolRegisterForm h1 {
+    font-weight: 800;
+    font-size: 40px;
+    color: #c71818;
+}
+
+.schoolRegisterForm form {
+    background-color: #ebebeb;
+    border-radius: 5px;
+}
+
+.schoolRegisterForm form label {
+    font-size: large;
+    margin: 1% auto;
+}
+
+.schoolRegisterForm form button {
+    width: 100px;
+    padding: 5px;
+    background-color: rgb(19, 148, 242);
+    border: 1px white solid;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.loginLink {
+    float: right;
+    text-decoration: none;
+
+}
+
+.verificationStatus {
+    color: #137ef2;
+}
+
+/* school registratio ends */
+/* form  start*/
+.hero {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding-bottom: 50px;
+}
+
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #137ef2;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+
+
+/* add book form */
+.center-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.new-book-form {
+    height: 300px;
+    padding: 50px;
+    background: white;
+    border: 1px solid #dae7f5;
+    ;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #192735;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+    z-index: 999;
+}
+
+.book-list {
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.formTable {
+    border: 1px solid black;
+}
+
+/* Minority form */
+.position-relative {
+    position: relative;
+}
+
+.open-minority-form-btn {
+    position: absolute;
+    top: 60%;
+    right: 20%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.open-minority-form-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.modal1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content.minority-form {
+    width: 360px;
+    height: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: #0056b3;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* .blur-background {
+    filter: blur(4px);
+} */
+
+/* student report  */
+.student-info,
+.personal-info {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-print {
+    margin-top: 20px;
+}
+
+/* CSS for printing */
+@media print {
+    body * {
+        visibility: visible;
+    }
+
+    #print-section,
+    #print-section * {
+        display: none;
+    }
+
+    #print-section {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+@media only print {
+
+    .table thead tr,
+    .table thead tr {
+        width: auto;
+        height: auto;
+        overflow: visible;
+    }
+}
+
+.border {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+.table-container {
+    overflow: auto;
+    max-height: 100%;
+}
+
+.table td,
+.table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 1%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.table th {
+    background-color: #449cfa !important;
+}
+
+.allstudent {
+    border: 1px solid #6fb5ff;
+    background-color: #6fb5ff !important;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.right-fixed {
+    position: sticky;
+    right: -20px;
+    width: 40px;
+    background-color: #5ca8fa !important;
+
+}
+
+.right-fixed i {
+    width: 36px;
+}
+
+.right-fixed i:hover {
+    cursor: pointer;
+    color: #007bff;
+    font-size: 18px;
+}
+
+/* pdf design start */
+.style-pdf {
+    text-align: center;
+}
+
+.first-pdf {
+    border: 2px dotted black;
+    margin: 30px;
+    padding: 20px;
+    text-align: left;
+    height: 700px;
+    width: 40%;
+    line-height: 25px;
+}
+
+.first-pdf h4 {
+    color: #c71818;
+    font-size: 28px;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+}
+
+.regBook1 {
+    float: left;
+}
+
+.regBook2 {
+    float: right;
+}
+
+.second-line {
+
+    border-bottom: 1px solid black;
+    padding-bottom: 35px;
+}
+
+.style-pdf button {
+    color: white;
+    background-color: #137ef2;
+    border: 1px solid #137ef2;
+    padding: 6px;
+    border-radius: 3px;
+    float: left;
+    margin-bottom: 5%;
+}
+
+.style-pdf button:hover {
+    color: #137ef2;
+    background-color: white;
+    border: 1px solid #137ef2;
+}
+
+.pdf-footer {
+    bottom: 0;
+    margin-top: 34%;
+}
+
+/* pdf design end */
+
+.slick-arrow {
+    color: black;
+    background-color: black;
+}
+
+/* Custom CSS classes */
+.custom-form {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #192735;
+    height: 95%;
+}
+
+.custom-form .form-group {
+    margin-bottom: 5px;
+}
+
+.custom-form .form-control {
+    width: 100%;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px auto;
+    font-size: 13px;
+}
+.custom-form label {
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.custom-form select.form-control {
+    height: 40px;
+    font-size: 13px;
+}
+
+.custom-formbtn .btn-primary {
+    color: white;
+    background-color: #137ef2;
+    border: 1px solid #137ef2;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 5%;
+}
+
+.custom-formbtn .btn-primary:hover {
+
+    color: #137ef2;
+    background-color: white;
+    border: 1px solid #137ef2;
+}
+
+.lcImage img:hover {
+    height: 204px;
+    width: 154px;
+    box-shadow: 0 0 10px #192735;
+    cursor: pointer;
+}
+
+/* show multiple student of same registerNo */
+/* Styles for overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure it's above other content */
+  }
+  
+  /* Styles for table */
+  .record-tableReg {
+    width: 45%; /* Adjust the width as needed */
+    border-collapse: collapse;
+    background-color: #fff; /* Background color for the table */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  }
+  
+  .record-tableReg th,
+  .record-tableReg td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Border color */
+  }
+  
+  .record-tableReg th {
+    background-color: #f2f2f2; /* Header background color */
+  }
+  
+  /* Hover effect on table rows */
+  .record-tableReg tr:hover {
+    background-color: #f5f5f5; /* Hover background color */
+  }
+  
+  /* Cursor style on hover */
+  .record-tableReg tr:hover {
+    cursor: pointer;
+  }
+  
+  .main-content-of-page{
+    float:right;
+    width: 90%;
+    padding: 1%;
+    margin-top: 70px;
+  }
